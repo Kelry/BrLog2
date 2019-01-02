@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_motorista">
+
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtlayout_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="14"
+            app:counterOverflowTextAppearance="@color/colorAccent"
+            app:passwordToggleEnabled="true"
+            >
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/txt_cpf"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/comfortaa"
+                android:hint="CPF"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/Apto_Inapto_Motorista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/comfortaa"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="Nome do motorista:"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp" />
+
+
+        <TextView
+            android:id="@+id/gettext_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comfortaa"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="Data de nascimento:"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/gettext_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comfortaa"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+
+
+        <TextView
+            android:id="@+id/text_cnh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="Número da CNH:"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/gettext_cnh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/comfortaa"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+
+
+
+            <Button
+                android:id="@+id/btn_"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/shape"
+                android:elevation="0dp"
+                android:text="BUSCAR"
+                android:textColor="@color/graylight"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                tools:fontFamily="@font/comfortaa" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEEE"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_sm">
+
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="Informe o número do documento "
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            />
+
+
+        <Spinner
+            android:id="@+id/sp_sm"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:entries="@color/colorPrimary"
+            android:popupBackground="#EEEEEE"
+            android:textSize="16dp"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <EditText
+            android:id="@+id/txt_sm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
+            android:hint="Número do documento"
+            android:singleLine='true'
+            android:maxLength="11"/>
+
+        <Switch
+            android:id="@+id/sw_sm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="Prosseguir sem número de SM"
+            android:textColor="#6E6D6C"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center">
+            <Button
+                android:id="@+id/btn_continuar"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Continuar"
+                android:background="@drawable/shape"
+                android:textColor="?attr/colorBackgroundFloating" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+
+

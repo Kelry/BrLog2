@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.ItensAdicionaisSaida_LH">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/txt_NumeroLacrePortaTraseira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_lacre"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
+            android:hint="N°do lacre da porta traseira"
+            android:inputType="textPersonName"
+            android:textColor="#343E83"
+            android:textStyle="bold"
+            tools:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/txt_NumeroLacrePortaLateral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_lacre"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
+            android:hint="N°do lacre da porta lateral"
+            android:inputType="textPersonName"
+            android:textColor="#343E83"
+            android:textStyle="bold"
+            tools:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/txt_QtdeNotasFiscais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_n"
+            android:textSize="17dp"
+            android:fontFamily="@font/comfortaa"
+            android:hint="Qtde de sacos de notas fiscais"
+            android:inputType="number"
+            android:textColor="#343E83"
+            android:textStyle="bold"
+            tools:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/txt_QtdeDevolucao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_n"
+            android:textSize="17dp"
+            android:fontFamily="@font/comfortaa"
+            android:hint="Qtde de sacos de devolução"
+            android:inputType="number"
+            android:textColor="#343E83"
+            android:textStyle="bold"
+            tools:textAllCaps="true" />
+
+
+        <EditText
+            android:id="@+id/txt_RespAmarracao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_lacre"
+            android:textSize="17dp"
+            android:fontFamily="@font/comfortaa"
+            android:hint=" Responsável pela amarração"
+            android:textColor="#343E83"
+            android:textStyle="bold"
+            tools:textAllCaps="true" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center">
+        <Button
+            android:id="@+id/btn_lineH"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="275dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape"
+            android:elevation="0dp"
+            android:text="CONTINUAR"
+            android:textColor="@color/graylight"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            tools:fontFamily="@font/comfortaa" />
+    </LinearLayout>
+</LinearLayout>

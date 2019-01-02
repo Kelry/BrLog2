@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.brasilrisk.mobilechecklistgeralbrlog">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icon2"
+        android:label="BRLog Checklist"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_sm"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_veiculo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_transportadora"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_motorista"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_fotos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_checklist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_Protocol"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.TipoChecklist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_Operacao"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_adicionais"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.brasilrisk.mobilechecklistgeralbrlog"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.BuscarDocaSaida"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.FotosSaidaDoca"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.ItensAdicionaisSaida_LH"
+            android:screenOrientation="portrait" />
+        <activity android:name="mobilechecklistgeralbrlog.brasilrisk.com.brlog.ValidarTipoVeiculo"></activity>
+    </application>
+
+</manifest>

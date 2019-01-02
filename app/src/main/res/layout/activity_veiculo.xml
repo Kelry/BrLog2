@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_veiculo">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EEEEEE"
+                android:fontFamily="@font/comfortaa"
+                android:text="Informe a placa do cavalo"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:ignore="DuplicateIds,MissingConstraints" />
+
+            <EditText
+                android:id="@+id/txt_cavalo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:fontFamily="@font/comfortaa"
+                android:hint="Placa do Cavalo"
+                android:inputType="textCapCharacters"
+                android:textColor="#343E83"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/txt_carretaname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa"
+                android:text="Informe a placa da carreta"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txt_carreta1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:fontFamily="@font/comfortaa"
+                    android:hint="Placa da carreta 1"
+                    android:inputType="textCapCharacters"
+                    android:textAllCaps="true"
+                    android:textColor="#343E83"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_carreta2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:fontFamily="@font/comfortaa"
+                    android:hint="Placa da carreta 2"
+                    android:inputType="textCapCharacters"
+                    android:textColor="#343E83"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Apto_Inapto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txt_rastreamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Tecnologia:"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtget_tecnologiarastreamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Terminal:"
+                android:textColor="@color/label"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtget_terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/icon_wifi"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                  />
+
+                <TextView
+                    android:id="@+id/txt_informacao_posicao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_posicao"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:id="@+id/txtget_carreta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Escolha o tipo de carreta: "
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/sp_carreta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textSize="20dp" />
+
+
+
+            <Button
+                android:id="@+id/btn_"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/shape"
+                android:elevation="0dp"
+                android:text="CONTINUAR"
+                android:textColor="@color/graylight"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                tools:fontFamily="@font/comfortaa"
+                android:layout_marginTop="15dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

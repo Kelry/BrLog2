@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.BuscarDocaSaida">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:id="@+id/scroll_Doca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa"
+                android:text="Informe o número do documento "
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/sp_documento_doca"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:entries="@color/colorPrimary"
+            android:popupBackground="#EEEEEE"
+            android:spinnerMode="dropdown"
+            android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/txt_documento_pesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="número do documento"
+                android:singleLine='true'
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_doc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Documento:"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/gettext_doc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Nome do motorista:"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/gettext_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Perfil:"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/gettxt_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/text_transp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Transportadora:"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/gettext_transp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_cavalo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Cavalo:"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/gettext_cavalo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_Carreta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Carreta:"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/gettext_carreta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="275dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/shape"
+                    android:elevation="0dp"
+                    android:text="BUSCAR"
+                    android:textColor="@color/graylight"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:visibility="visible"
+                    tools:fontFamily="@font/comfortaa" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+

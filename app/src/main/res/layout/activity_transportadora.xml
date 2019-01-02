@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEEE"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_transportadora">
+    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="Informe a transportadora da operação "
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/sp_transportadora"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center">
+
+            <Button
+                android:id="@+id/btn_continuar"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape"
+                android:elevation="0dp"
+                android:text="CONTINUAR"
+                android:textColor="@color/graylight"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                tools:fontFamily="@font/comfortaa"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

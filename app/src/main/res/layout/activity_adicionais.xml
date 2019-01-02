@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.Activity_veiculo">
+
+    <include layout="@layout/toolbar" />
+
+
+                    <ScrollView
+                        android:id="@+id/scrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <EditText
+                                android:id="@+id/txt_pedagio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_action_cartao"
+                                android:ems="10"
+                                android:fontFamily="@font/comfortaa"
+                                android:hint=" Número do cartão de pedágio"
+                                android:inputType="textPersonName"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+
+                            <EditText
+                                android:id="@+id/txt_palete"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:hint=" Posições de paletes na carreta"
+                                android:fontFamily="@font/comfortaa"
+                                android:drawableLeft="@drawable/ic_action_palete"
+                                android:inputType="number"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+
+                            <EditText
+                                android:id="@+id/txt_alturabau"
+                                android:hint=" Altura do baú/sider"
+                                android:drawableLeft="@drawable/ic_action_altura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:ems="10"
+                                android:fontFamily="@font/comfortaa"
+                                android:inputType="numberDecimal"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+
+
+                            <EditText
+                                android:id="@+id/txt_qtd_eixos"
+                                android:hint=" Qtd. de eixos"
+                                android:drawableLeft="@drawable/ic_action_eixo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:inputType="number"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+
+
+                            <EditText
+                                android:id="@+id/txt_minuta"
+                                android:hint=" Número da minuta"
+                                android:layout_marginTop="3dp"
+                                android:drawableLeft="@drawable/ic_action_minuta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="textMultiLine"
+                                android:fontFamily="@font/comfortaa"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+
+                            <EditText
+                                android:id="@+id/txt_moop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:drawableLeft="@drawable/ic_action_moop"
+                                android:ems="10"
+                                android:fontFamily="@font/comfortaa"
+                                android:hint=" Número MOOP"
+                                android:inputType="textPersonName"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+                            <EditText
+                                android:id="@+id/txt_validade_moop"
+                                android:hint=" Validade MOOP"
+                                android:drawableLeft="@drawable/ic_action_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:inputType="datetime|date"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true"/>
+
+
+                            <EditText
+                                android:id="@+id/txt_qtd_lacres"
+                                android:hint=" Qtd. de lacres"
+                                android:drawableLeft="@drawable/ic_action_lacre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:inputType="number"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+                            <EditText
+                                android:id="@+id/txt_NumeroDoca"
+                                android:hint=" Número da Doca "
+                                android:drawableLeft="@drawable/icon_n"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true"/>
+
+                            <EditText
+                                android:id="@+id/txt_Numerorampa"
+                                android:hint=" Número da Rampa "
+                                android:drawableLeft="@drawable/icon_ramp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true"/>
+
+
+                            <EditText
+                                android:id="@+id/txt_comprimento_veiculo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:drawableLeft="@drawable/icon_veiculo"
+                                android:ems="10"
+                                android:fontFamily="@font/comfortaa"
+                                android:hint="Comprimento Veículo "
+                                android:inputType="numberDecimal"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true" />
+
+                            <EditText
+                                android:id="@+id/txt_largura_veiculo"
+                                android:hint="Largura do veículo"
+                                android:drawableLeft="@drawable/icon_veiculo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:inputType="numberDecimal"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true"/>
+
+
+                            <EditText
+                                android:id="@+id/txt_altura_veiculo"
+                                android:hint="Altura do Veículo "
+                                android:drawableLeft="@drawable/icon_veiculo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/comfortaa"
+                                android:inputType="numberDecimal"
+                                android:textColor="#343E83"
+                                android:textStyle="bold"
+                                tools:textAllCaps="true"/>
+
+                            <Button
+                                android:id="@+id/btn_continuar_adicionais"
+                                style="@style/Widget.AppCompat.Button"
+                                android:layout_width="275dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:background="@drawable/shape"
+                                android:elevation="0dp"
+                                android:text="INICIAR CHECKLIST"
+                                android:textColor="@color/graylight"
+                                android:textColorLink="@color/colorPrimary"
+                                android:textSize="18sp"
+                                android:textStyle="normal"
+                                tools:fontFamily="@font/comfortaa"
+                                android:layout_marginTop="20dp"/>
+
+                        </LinearLayout>
+                    </ScrollView>
+</LinearLayout>
+
+

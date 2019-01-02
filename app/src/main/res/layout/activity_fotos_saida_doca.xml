@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="mobilechecklistgeralbrlog.brasilrisk.com.brlog.FotosSaidaDoca">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/txt_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Pronto! Agora para finalizar, capture três fotos do veículo."
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_texto2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="Dê preferência para os itens não validados."
+            android:textColor="@android:color/background_dark"
+            android:textSize="18dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_v3"
+                android:layout_width="90dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/camera2" />
+
+            <ImageView
+                android:id="@+id/img_v"
+                android:layout_width="90dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/camera2"
+                />
+
+
+            <ImageView
+                android:id="@+id/img_v2"
+                android:layout_width="90dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/camera2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_fim_saida"
+            android:layout_width="275dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape"
+            android:elevation="0dp"
+            android:text="Encerrar"
+            android:textColor="@color/graylight"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            tools:fontFamily="@font/comfortaa" />
+
+
+    </LinearLayout>
+</LinearLayout>
