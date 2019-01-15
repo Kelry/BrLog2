@@ -96,9 +96,9 @@ public class PostRequestAsyncTask extends AsyncTask<Void, Void, String> {
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
-            urlConnection.setConnectTimeout(20000);
+            urlConnection.setConnectTimeout(40000);
             urlConnection.setDoInput(true);
-            urlConnection.setReadTimeout(20000);
+            urlConnection.setReadTimeout(40000);
             //urlConnection.setRequestProperty("token", "Basic ZXZveDpwbGF0YWZvcm1hLTIwMTY=");
             //urlConnection.setRequestProperty("Content-Type", "application/json");
             OutputStream outputStream = new BufferedOutputStream(urlConnection.getOutputStream());

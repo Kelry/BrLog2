@@ -10,6 +10,8 @@ public class Result implements Serializable{
 
     private int CodChecklist;
 
+    private int CodEmpresa;
+
     private String CodVeiculo;
 
     private String CodMotorista;
@@ -36,6 +38,10 @@ public class Result implements Serializable{
 
     private String Foto3;
 
+    private String Foto4;
+
+    private String Foto5;
+
     private String Observacao;
 
     private String PlacaCarreta;
@@ -43,15 +49,11 @@ public class Result implements Serializable{
     private String PlacaCarreta2;
 
     private int CodTipoChecklist;
-
     @Nullable
     private String SolicitacaoMonitoramentoId;
-
     private boolean Aprovado;
-
     @Nullable
     private String CodSegmentoTransporte;
-
     @Nullable
     private String CodTransportadora;
 
@@ -508,6 +510,30 @@ public class Result implements Serializable{
 
     public void setCodTipoChecklist(int codTipoChecklist) {
         CodTipoChecklist = codTipoChecklist;
+    }
+
+    public int getCodEmpresa() {
+        return CodEmpresa;
+    }
+
+    public void setCodEmpresa(int codEmpresa) {
+        CodEmpresa = codEmpresa;
+    }
+
+    public String getFoto4() {
+        return Foto4;
+    }
+
+    public void setFoto4(String foto4) {
+        Foto4 = foto4;
+    }
+
+    public String getFoto5() {
+        return Foto5;
+    }
+
+    public void setFoto5(String foto5) {
+        Foto5 = foto5;
     }
 }
 

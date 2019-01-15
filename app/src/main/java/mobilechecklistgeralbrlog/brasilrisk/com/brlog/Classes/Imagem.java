@@ -11,6 +11,8 @@ public class Imagem implements Serializable {
     private String PrimeiraFoto;
     private String SegundaFoto;
     private String TerceiraFoto;
+    private String QuartaFoto;
+    private String QuintaFoto;
 
     public String getPrimeiraFoto() {
         return PrimeiraFoto;
@@ -34,5 +36,21 @@ public class Imagem implements Serializable {
 
     public void setTerceiraFoto(String terceiraFoto) {
         TerceiraFoto = terceiraFoto;
+    }
+
+    public String getQuartaFoto() {
+        return QuartaFoto;
+    }
+
+    public void setQuartaFoto(String quartaFoto) {
+        QuartaFoto = quartaFoto;
+    }
+
+    public String getQuintaFoto() {
+        return QuintaFoto;
+    }
+
+    public void setQuintaFoto(String quintaFoto) {
+        QuintaFoto = quintaFoto;
     }
 }

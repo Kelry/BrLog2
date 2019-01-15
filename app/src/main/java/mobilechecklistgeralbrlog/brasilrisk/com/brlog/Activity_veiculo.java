@@ -1,10 +1,10 @@
 package mobilechecklistgeralbrlog.brasilrisk.com.brlog;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
@@ -37,7 +37,6 @@ import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Classes.Get_Veiculo;
 import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Classes.Get_sm;
 import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Classes.Mask;
 import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Classes.Result;
-import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Classes.Tipo_Checklist;
 import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Interface.OnPostExecute;
 import mobilechecklistgeralbrlog.brasilrisk.com.brlog.Utils.Shered_Cache;
 
@@ -47,7 +46,7 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
     EditText cavalo;
     EditText carreta1;
     EditText carreta2;
-    TextView txtrast, info_posicao, dataUltima_posicao, Apto_Inapto;
+    TextView txtrast, info_posicao, dataUltima_posicao, Apto_Inapto,placaUF,carretaUF,Placa_DataCheckList,TituloUltimoCheckList,Carreta_DataCheckList;
     TextView txtterm, txtget_carreta;
     TextView rastreamento;
     TextView terminal;
@@ -66,42 +65,14 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_veiculo);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        title = (TextView) findViewById(R.id.titulo_toolbar);
-        title.setText("Validação do veículo");
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        scrollView = (ScrollView) findViewById(R.id.scrollView2);
-        cavalo = (EditText) findViewById(R.id.txt_cavalo);
-        carreta1 = (EditText) findViewById(R.id.txt_carreta1);
-        carreta2 = (EditText) findViewById(R.id.txt_carreta2);
-        rastreamento = (TextView) findViewById(R.id.txtget_tecnologiarastreamento);
-        terminal = (TextView) findViewById(R.id.txtget_terminal);
-        btn_ = (Button) findViewById(R.id.btn_);
-        txtrast = (TextView) findViewById(R.id.txt_rastreamento);
-        txtterm = (TextView) findViewById(R.id.txt_terminal);
-        spinner_carretas = (Spinner) findViewById(R.id.sp_carreta);
-        spinner_carretas.setVisibility(View.INVISIBLE);
-        txtget_carreta = (TextView) findViewById(R.id.txtget_carreta);
-        txtget_carreta.setVisibility(View.INVISIBLE);
-        dataUltima_posicao = (TextView) findViewById(R.id.txt_informacao_posicao);
-        info_posicao = (TextView) findViewById(R.id.txt_posicao);
-        icon_wifi = (ImageView) findViewById(R.id.icon_wifi);
-        Apto_Inapto = (TextView) findViewById(R.id.Apto_Inapto);
-        cavalo.addTextChangedListener(Mask.insert("###-####", cavalo));
-        carreta1.addTextChangedListener(Mask.insert("###-####", carreta1));
-        carreta2.addTextChangedListener(Mask.insert("###-####", carreta2));
-        txtrast.setVisibility(View.INVISIBLE);
-        txtterm.setVisibility(View.INVISIBLE);
-        dataUltima_posicao.setVisibility(View.INVISIBLE);
-        info_posicao.setVisibility(View.INVISIBLE);
+        Inicializar();
+
         final SharedPreferences preferences = getSharedPreferences("BrasilRisk_2018", 0);
         final SharedPreferences.Editor editor = preferences.edit();
         ListarCarretas = preferences.getBoolean(Shered_Cache.SELECIONAR_TIPO_CARRETA, false);
         int tipochecklist = preferences.getInt(Shered_Cache.COD_TIPO_CHECKLIST, -1);
         int codEmpresa = preferences.getInt(Shered_Cache.COD_EMPRESA, -1);
         boolean ExibirApto = preferences.getBoolean(Shered_Cache.EXIBIR_INFORMACAOVEICULO_AptoInapto, false);
-
 
         Spinner_TipoVeiculo(ListarCarretas, codEmpresa, tipochecklist);
         Bundle ObjetoRecebido = getIntent().getExtras();
@@ -114,8 +85,15 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
                 editor.commit();
 
                 if (sm_veiculo.getVeiculo() != null) {
+
+                    placaUF.setVisibility(View.VISIBLE);
+                    carretaUF.setVisibility(View.VISIBLE);
+
+                    placaUF.setText("Placa: "+Verificacao(sm_veiculo.getVeiculo().getPlaca()));
+                    carretaUF.setText("Carreta: "+Verificacao(sm_veiculo.getPlacaCarreta()));
+
                     cavalo.setText(sm_veiculo.getVeiculo().getPlaca());
-                    carreta1.setText(sm_veiculo.getPlacaCarreta());
+                    carreta1.setText(sm_veiculo.getPlacaCarreta() );
                     carreta2.setText(sm_veiculo.getPlacaCarreta2());
                     txtrast.setVisibility(View.VISIBLE);
                     txtterm.setVisibility(View.VISIBLE);
@@ -123,6 +101,18 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
                     info_posicao.setVisibility(View.VISIBLE);
                     rastreamento.setText(sm_veiculo.getVeiculo().getTecnologia());
                     terminal.setText(sm_veiculo.getVeiculo().getNumeroRastreador());
+
+                    CheckList_Colorido(sm_veiculo.getVeiculo().getCorStatusUltimoChecklist());
+                    TituloUltimoCheckList.setVisibility(View.VISIBLE);
+
+                    Placa_DataCheckList.setVisibility(View.VISIBLE);
+                    Carreta_DataCheckList.setVisibility(View.VISIBLE);
+
+                    Placa_DataCheckList.setText("Placa: "+sm_veiculo.getVeiculo().getDataUltimoChecklist());
+
+                    Carreta_DataCheckList.setText("Carreta: "+sm_veiculo.getVeiculo().getDataUltimoChecklistCarreta());
+                    CheckList_CorCarreta(sm_veiculo.getVeiculo().getCorStatusUltimoChecklistCarreta());
+
                     if (ExibirApto)
                         Apto_Inapto.setText(sm_veiculo.getVeiculo().getSituacaoVeiculo());
 
@@ -150,6 +140,7 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
                     EnableContinuar();
 
                 } else {
+
                     EnableBuscar();
                 }
             } else {
@@ -157,11 +148,54 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
             }
         } else {
 
+            cavalo.addTextChangedListener(Mask.insert("###-####", cavalo));
+            carreta1.addTextChangedListener(Mask.insert("###-####", carreta1));
+            carreta2.addTextChangedListener(Mask.insert("###-####", carreta2));
+
             EnableBuscar();
         }
     }
 
     //------------------------------------------------------------------------------------------------------
+
+    public void Inicializar(){
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        title = (TextView) findViewById(R.id.titulo_toolbar);
+        title.setText("Validação do veículo");
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        scrollView = (ScrollView) findViewById(R.id.scrollView2);
+        cavalo = (EditText) findViewById(R.id.txt_cavalo);
+        carreta1 = (EditText) findViewById(R.id.txt_carreta1);
+        carreta2 = (EditText) findViewById(R.id.txt_carreta2);
+        rastreamento = (TextView) findViewById(R.id.txtget_tecnologiarastreamento);
+        terminal = (TextView) findViewById(R.id.txtget_terminal);
+        btn_ = (Button) findViewById(R.id.btn_);
+        txtrast = (TextView) findViewById(R.id.txt_rastreamento);
+        txtterm = (TextView) findViewById(R.id.txt_terminal);
+        spinner_carretas = (Spinner) findViewById(R.id.sp_carreta);
+        spinner_carretas.setVisibility(View.INVISIBLE);
+        txtget_carreta = (TextView) findViewById(R.id.txtget_carreta);
+        txtget_carreta.setVisibility(View.INVISIBLE);
+        dataUltima_posicao = (TextView) findViewById(R.id.txt_informacao_posicao);
+        info_posicao = (TextView) findViewById(R.id.txt_posicao);
+        icon_wifi = (ImageView) findViewById(R.id.icon_wifi);
+        Apto_Inapto = (TextView) findViewById(R.id.Apto_Inapto);
+        txtrast.setVisibility(View.INVISIBLE);
+        txtterm.setVisibility(View.INVISIBLE);
+        dataUltima_posicao.setVisibility(View.INVISIBLE);
+        info_posicao.setVisibility(View.INVISIBLE);
+        placaUF=(TextView)findViewById(R.id.PlacaUF);
+        carretaUF=(TextView)findViewById(R.id.CarretaUF);
+        placaUF.setVisibility(View.INVISIBLE);
+        carretaUF.setVisibility(View.INVISIBLE);
+        Placa_DataCheckList=(TextView)findViewById(R.id.PLaca_DataCheckList);
+        Carreta_DataCheckList=(TextView)findViewById(R.id.Carreta_DataCheckList);
+        TituloUltimoCheckList=(TextView)findViewById(R.id.ultimochecklist) ;
+        Placa_DataCheckList.setVisibility(View.INVISIBLE);
+        Carreta_DataCheckList.setVisibility(View.INVISIBLE);
+        TituloUltimoCheckList.setVisibility(View.INVISIBLE);
+    }
 
     private void EnableBuscar() {
 
@@ -241,10 +275,12 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
                 int cod = preferences.getInt(Shered_Cache.COD_EMPRESA, -1);
                 String codE = String.valueOf(cod);
                 final boolean ExibirApto = preferences.getBoolean(Shered_Cache.EXIBIR_INFORMACAOVEICULO_AptoInapto, false);
-                final GetRequestAsyncTask send = new GetRequestAsyncTask(Activity_veiculo.this, "validar/veiculo", null);
+                final GetRequestAsyncTask send = new GetRequestAsyncTask(Activity_veiculo.this, "validar/VeiculoCarretaCavalo", null);
                 send.EnableProgressdialog("Carregando");
                 send.AddFirstParam("placaVeiculo", cavalo.getText().toString());
                 send.AddParam(Shered_Cache.COD_EMPRESA, codE);
+                send.AddParam("placaCarreta",carreta1.getText().toString());
+
 
                 send.setOnPostExecute(new OnPostExecute() {
                     @Override
@@ -262,6 +298,20 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
                                 terminal.setText(get_veiculo.getNumeroRastreador());
                                 dataUltima_posicao.setVisibility(View.VISIBLE);
                                 info_posicao.setVisibility(View.VISIBLE);
+                                placaUF.setVisibility(View.VISIBLE);
+                                carretaUF.setVisibility(View.VISIBLE);
+                                placaUF.setText("Placa: "+Verificacao(get_veiculo.getPlaca()));
+                                carretaUF.setText("Carreta: "+Verificacao(get_veiculo.getCarretaPlaca()));
+                                TituloUltimoCheckList.setVisibility(View.VISIBLE);
+
+                                CheckList_Colorido(get_veiculo.getCorStatusUltimoChecklist());
+                                Placa_DataCheckList.setVisibility(View.VISIBLE);
+                                Placa_DataCheckList.setText("Placa: "+get_veiculo.getDataUltimoChecklist());
+
+                                Carreta_DataCheckList.setVisibility(View.VISIBLE);
+                                Carreta_DataCheckList.setText("Carreta: "+get_veiculo.getDataUltimoChecklistCarreta());
+                                CheckList_CorCarreta(get_veiculo.getCorStatusUltimoChecklistCarreta());
+
                                 if (ExibirApto)
                                     Apto_Inapto.setText(get_veiculo.getSituacaoVeiculo());
 
@@ -403,6 +453,7 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
     }
 
     public void Icon_Colorido(String cor) {
+
         if (cor.equals("verde")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 icon_wifi.setImageDrawable(getDrawable(R.drawable.ic_action_wifi_green));
@@ -444,6 +495,7 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
                 }
             }
         } else {
+
             spinner_carretas.setVisibility(View.INVISIBLE);
             txtget_carreta.setVisibility(View.INVISIBLE);
         }
@@ -463,4 +515,44 @@ public class Activity_veiculo extends AppCompatActivity implements View.OnClickL
         alert.show();
     }
 
+    public String Verificacao(String Placa){
+        if(Placa==null)
+            Placa="";
+
+        return Placa;
+    }
+
+    public void CheckList_Colorido(String cor) {
+
+        if (cor.equals("verde")) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+               Placa_DataCheckList.setTextColor(Color.parseColor("#53A475"));
+              // Carreta_DataCheckList.setTextColor(Color.parseColor("#53A475"));
+            }
+        }
+
+        if (cor.equals("vermelho")) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+               Placa_DataCheckList.setTextColor(Color.parseColor("#E55055"));
+              // Carreta_DataCheckList.setTextColor(Color.parseColor("#E55055"));
+            }
+        }
+    }
+
+    public void CheckList_CorCarreta(String cor){
+
+        if (cor.equals("verde")) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                //Placa_DataCheckList.setTextColor(Color.parseColor("#53A475"));
+                Carreta_DataCheckList.setTextColor(Color.parseColor("#53A475"));
+            }
+        }
+
+        if (cor.equals("vermelho")) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                //Placa_DataCheckList.setTextColor(Color.parseColor("#E55055"));
+                Carreta_DataCheckList.setTextColor(Color.parseColor("#E55055"));
+            }
+        }
+    }
 }

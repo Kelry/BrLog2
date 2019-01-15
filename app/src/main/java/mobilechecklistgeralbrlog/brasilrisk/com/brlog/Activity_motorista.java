@@ -51,27 +51,8 @@ public class Activity_motorista extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motorista);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        title = (TextView) findViewById(R.id.titulo_toolbar);
-        title.setText("Validação do motorista");
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        btn_ = (Button) findViewById(R.id.btn_);
-        cpf = (AppCompatEditText) findViewById(R.id.txt_cpf);
-        cnh = (TextView) findViewById(R.id.gettext_cnh);
-        date = (TextView) findViewById(R.id.gettext_date);
-        nome = (TextView) findViewById(R.id.gettext_name);
-        txtcnh = (TextView) findViewById(R.id.text_cnh);
-        txtdate = (TextView) findViewById(R.id.text_date);
-        txtnome = (TextView) findViewById(R.id.text_name);
-        Apto_Inapto_Motorista = (TextView) findViewById(R.id.Apto_Inapto_Motorista);
-        layout = (TextInputLayout) findViewById(R.id.txtlayout_cpf);
-        cpf.addTextChangedListener(Mask.insert("###.###.###-##", cpf));
-        txtnome.setVisibility(View.INVISIBLE);
-        txtdate.setVisibility(View.INVISIBLE);
-        txtcnh.setVisibility(View.INVISIBLE);
-        cnh.setVisibility(View.INVISIBLE);
-        date.setVisibility(View.INVISIBLE);
+        Inicializar();
+
         EnableBuscar();
         SharedPreferences preferences = getSharedPreferences("BrasilRisk_2018", 0);
         boolean SituacaoMotorista = preferences.getBoolean(Shered_Cache.EXIBIR_INFORMACAOMOTORISTA_AptoInapto, false);
@@ -117,6 +98,34 @@ public class Activity_motorista extends AppCompatActivity implements View.OnClic
     }
 
     //------------------------------------------------------------------------------------------------------------
+
+    public void Inicializar ()
+    {
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        title = (TextView) findViewById(R.id.titulo_toolbar);
+        title.setText("Validação do motorista");
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        btn_ = (Button) findViewById(R.id.btn_);
+        cpf = (AppCompatEditText) findViewById(R.id.txt_cpf);
+        cnh = (TextView) findViewById(R.id.gettext_cnh);
+        date = (TextView) findViewById(R.id.gettext_date);
+        nome = (TextView) findViewById(R.id.gettext_name);
+        txtcnh = (TextView) findViewById(R.id.text_cnh);
+        txtdate = (TextView) findViewById(R.id.text_date);
+        txtnome = (TextView) findViewById(R.id.text_name);
+        Apto_Inapto_Motorista = (TextView) findViewById(R.id.Apto_Inapto_Motorista);
+        layout = (TextInputLayout) findViewById(R.id.txtlayout_cpf);
+        cpf.addTextChangedListener(Mask.insert("###.###.###-##", cpf));
+        txtnome.setVisibility(View.INVISIBLE);
+        txtdate.setVisibility(View.INVISIBLE);
+        txtcnh.setVisibility(View.INVISIBLE);
+        cnh.setVisibility(View.INVISIBLE);
+        date.setVisibility(View.INVISIBLE);
+
+    }
+
+
     private void EnableBuscar() {
 
         btn_.setText("BUSCAR");
@@ -175,7 +184,7 @@ public class Activity_motorista extends AppCompatActivity implements View.OnClic
                                 cnh.setText(get_motorista.getNumeroCNH());
                                 date.setText(get_motorista.getDataNascimento());
                                 nome.setText(get_motorista.getNomeMotorista());
-                                if(SituacaoMotoristaB)
+                                if (SituacaoMotoristaB)
                                     Apto_Inapto_Motorista.setText(get_motorista.getSituacaoMotorista());
                                 else
                                     Apto_Inapto_Motorista.setText("");
@@ -222,6 +231,7 @@ public class Activity_motorista extends AppCompatActivity implements View.OnClic
         } else {
             Intent it = new Intent(Activity_motorista.this, Activity_veiculo.class);
             startActivity(it);
+
         }
     }
 
@@ -240,6 +250,7 @@ public class Activity_motorista extends AppCompatActivity implements View.OnClic
     }
 
     private void DialogShow_net() {
+
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Conexão");
         builder.setMessage("Dispositivo sem acesso a internet. Verifique sua conexão para continuar.");

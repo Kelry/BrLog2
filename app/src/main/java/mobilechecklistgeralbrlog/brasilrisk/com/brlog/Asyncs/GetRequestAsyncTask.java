@@ -68,9 +68,9 @@ public class GetRequestAsyncTask extends AsyncTask<Void, Void, String> {
             //URL url = new URL("http://beta-audios.alomarketplace.com.br/RestApi/getAudiosPorCategoriaST");
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setDoOutput(true);
-            urlConnection.setConnectTimeout(20000);
+            urlConnection.setConnectTimeout(40000);
             urlConnection.setDoInput(true);
-            urlConnection.setReadTimeout(20000);
+            urlConnection.setReadTimeout(40000);
             //urlConnection.setRequestProperty("token", "Basic ZXZveDpwbGF0YWZvcm1hLTIwMTY=");
 
             try {

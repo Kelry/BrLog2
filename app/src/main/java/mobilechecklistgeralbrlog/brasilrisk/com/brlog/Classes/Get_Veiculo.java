@@ -64,6 +64,46 @@ public class Get_Veiculo implements Serializable {
 
     private boolean VeiculoApto;
 
+    private String DataUltimoChecklist;
+
+    private String CorStatusUltimoChecklist;
+
+    private String  DataUltimoChecklistCarreta;
+
+    private String  CorStatusUltimoChecklistCarreta ;
+
+    public String getDataUltimoChecklistCarreta() {
+        return DataUltimoChecklistCarreta;
+    }
+
+    public void setDataUltimoChecklistCarreta(String dataUltimoChecklistCarreta) {
+        DataUltimoChecklistCarreta = dataUltimoChecklistCarreta;
+    }
+
+    public String getCorStatusUltimoChecklistCarreta() {
+        return CorStatusUltimoChecklistCarreta;
+    }
+
+    public void setCorStatusUltimoChecklistCarreta(String corStatusUltimoChecklistCarreta) {
+        CorStatusUltimoChecklistCarreta = corStatusUltimoChecklistCarreta;
+    }
+
+    public String getDataUltimoChecklist() {
+        return DataUltimoChecklist;
+    }
+
+    public void setDataUltimoChecklist(String dataUltimoChecklist) {
+        DataUltimoChecklist = dataUltimoChecklist;
+    }
+
+    public String getCorStatusUltimoChecklist() {
+        return CorStatusUltimoChecklist;
+    }
+
+    public void setCorStatusUltimoChecklist(String corStatusUltimoChecklist) {
+        CorStatusUltimoChecklist = corStatusUltimoChecklist;
+    }
+
     public boolean isVeiculoApto() {
         return VeiculoApto;
     }

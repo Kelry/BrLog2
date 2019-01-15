@@ -90,6 +90,69 @@
             </LinearLayout>
 
             <TextView
+            android:id="@+id/PlacaUF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:fontFamily="@font/comfortaa"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Placa UF:"
+            />
+
+            <TextView
+                android:id="@+id/CarretaUF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16sp"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Carreta UF:"
+                />
+
+            <TextView
+                android:id="@+id/ultimochecklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16sp"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Data do último checklist realizado: "
+                />
+
+
+            <TextView
+                android:id="@+id/PLaca_DataCheckList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="10dp"
+                android:text="Placa:"
+                />
+
+            <TextView
+                android:id="@+id/Carreta_DataCheckList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="10dp"
+                android:text="Placa:"
+                />
+
+
+
+            <TextView
                 android:id="@+id/Apto_Inapto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
